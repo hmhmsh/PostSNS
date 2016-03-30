@@ -10,7 +10,9 @@ SNSに投稿するためのライブラリ
     [activityItems addObject: @"初期文字"];
     // [activityItems addObject: [NSURL URLWithString:@"投稿するURL"]];
     // [activityItems addObject: [UIImage imageNamed:@"初期画像"]];
+    
     NSMutableArray* excludedActivityTypes = [[NSMutableArray alloc]init];
     [excludedActivityTypes addObject:UIActivityTypeAirDrop];
     [excludedActivityTypes addObject:UIActivityTypePostToTwitter];
+    
     [PostSNSViewController showActionSheet:self ActivityItems:activityItems ExcludedActivityTypes:nil];
