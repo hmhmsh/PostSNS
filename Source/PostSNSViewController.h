@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface PostSNSViewController : UIViewController
-+ (void)showActionSheet:(UIViewController*)vc ActivityItems:(NSArray*)activityItems;
++ (void)showActionSheet:(UIViewController*)vc ActivityItems:(NSArray*)activityItems ExcludedActivityTypes:(NSArray*)excludedActivityTypes;
 @end

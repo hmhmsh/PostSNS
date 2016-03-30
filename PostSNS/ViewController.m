@@ -33,7 +33,11 @@
 	// [activityItems addObject: [NSURL URLWithString:@"投稿するURL"]];
 //	[activityItems addObject: [UIImage imageNamed:@"初期画像"]];
 	
-	[PostSNSViewController showActionSheet:self ActivityItems:activityItems];
+	NSMutableArray* excludedActivityTypes = [[NSMutableArray alloc]init];
+	[excludedActivityTypes addObject:UIActivityTypeAirDrop];
+	[excludedActivityTypes addObject:UIActivityTypePostToTwitter];
+	
+	[PostSNSViewController showActionSheet:self ActivityItems:activityItems ExcludedActivityTypes:excludedActivityTypes];
 }
 
 - (void)didReceiveMemoryWarning {

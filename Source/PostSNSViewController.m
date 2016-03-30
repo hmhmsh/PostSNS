@@ -10,12 +10,15 @@
 
 @implementation PostSNSViewController
 
-+ (void)showActionSheet:(UIViewController*)vc ActivityItems:(NSArray*)activityItems {
++ (void)showActionSheet:(UIViewController*)vc ActivityItems:(NSArray*)activityItems ExcludedActivityTypes:(NSArray *)excludedActivityTypes {
 	
 	UIActivityViewController* ac = [[UIActivityViewController alloc]initWithActivityItems:activityItems applicationActivities:nil];
 	ac.popoverPresentationController.sourceView = vc.view;
 	// 表示しない機能をリストに入れる
-	// ac.excludedActivityTypes = [[NSArray alloc] initWithObjects: UIActivityTypePrint, UIActivityTypeCopyToPasteboard, UIActivityTypeAssignToContact, UIActivityTypeSaveToCameraRoll, UIActivityTypeMessage, UIActivityTypePostToWeibo, nil];
+	if (excludedActivityTypes) {
+		ac.excludedActivityTypes = excludedActivityTypes;
+	}
+	
 	[vc presentViewController:ac animated:YES completion:nil];
 }
 @end
