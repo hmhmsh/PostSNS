@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "PostSNSViewController.h"
 
 @interface ViewController ()
 
@@ -17,6 +18,22 @@
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+	
+	UIButton* button = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 300, 300)];
+	button.backgroundColor = [UIColor lightGrayColor];
+	[button setTitle:@"共有" forState:UIControlStateNormal];
+	[button addTarget:self action:@selector(push:) forControlEvents:UIControlEventTouchUpInside];
+	[self.view addSubview:button];
+}
+
+- (void)push:(UIButton*)button
+{
+	NSMutableArray *activityItems = [[NSMutableArray alloc] init];
+	[activityItems addObject: @"初期文字"];
+	// [activityItems addObject: [NSURL URLWithString:@"投稿するURL"]];
+//	[activityItems addObject: [UIImage imageNamed:@"初期画像"]];
+	
+	[PostSNSViewController showActionSheet:self ActivityItems:activityItems];
 }
 
 - (void)didReceiveMemoryWarning {

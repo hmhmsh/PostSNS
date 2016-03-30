@@ -13,8 +13,7 @@
 		4D5FCEE71CAB84EC00AD1F96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D5FCEE51CAB84EC00AD1F96 /* Main.storyboard */; };
 		4D5FCEE91CAB84EC00AD1F96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D5FCEE81CAB84EC00AD1F96 /* Assets.xcassets */; };
 		4D5FCEEC1CAB84EC00AD1F96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D5FCEEA1CAB84EC00AD1F96 /* LaunchScreen.storyboard */; };
-		4D5FCEF71CAB84EC00AD1F96 /* PostSNSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D5FCEF61CAB84EC00AD1F96 /* PostSNSTests.m */; };
-		4D5FCF021CAB84EC00AD1F96 /* PostSNSUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D5FCF011CAB84EC00AD1F96 /* PostSNSUITests.m */; };
+		4D5FCF121CAB854300AD1F96 /* PostSNSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D5FCF111CAB854300AD1F96 /* PostSNSViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,11 +45,9 @@
 		4D5FCEEB1CAB84EC00AD1F96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D5FCEED1CAB84EC00AD1F96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D5FCEF21CAB84EC00AD1F96 /* PostSNSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PostSNSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4D5FCEF61CAB84EC00AD1F96 /* PostSNSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PostSNSTests.m; sourceTree = "<group>"; };
-		4D5FCEF81CAB84EC00AD1F96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D5FCEFD1CAB84EC00AD1F96 /* PostSNSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PostSNSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4D5FCF011CAB84EC00AD1F96 /* PostSNSUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PostSNSUITests.m; sourceTree = "<group>"; };
-		4D5FCF031CAB84EC00AD1F96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D5FCF101CAB854300AD1F96 /* PostSNSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PostSNSViewController.h; path = Source/PostSNSViewController.h; sourceTree = "<group>"; };
+		4D5FCF111CAB854300AD1F96 /* PostSNSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PostSNSViewController.m; path = Source/PostSNSViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,9 +78,8 @@
 		4D5FCED01CAB84EC00AD1F96 = {
 			isa = PBXGroup;
 			children = (
+				4D5FCF0F1CAB851C00AD1F96 /* Source */,
 				4D5FCEDB1CAB84EC00AD1F96 /* PostSNS */,
-				4D5FCEF51CAB84EC00AD1F96 /* PostSNSTests */,
-				4D5FCF001CAB84EC00AD1F96 /* PostSNSUITests */,
 				4D5FCEDA1CAB84EC00AD1F96 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -122,22 +118,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		4D5FCEF51CAB84EC00AD1F96 /* PostSNSTests */ = {
+		4D5FCF0F1CAB851C00AD1F96 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				4D5FCEF61CAB84EC00AD1F96 /* PostSNSTests.m */,
-				4D5FCEF81CAB84EC00AD1F96 /* Info.plist */,
+				4D5FCF101CAB854300AD1F96 /* PostSNSViewController.h */,
+				4D5FCF111CAB854300AD1F96 /* PostSNSViewController.m */,
 			);
-			path = PostSNSTests;
-			sourceTree = "<group>";
-		};
-		4D5FCF001CAB84EC00AD1F96 /* PostSNSUITests */ = {
-			isa = PBXGroup;
-			children = (
-				4D5FCF011CAB84EC00AD1F96 /* PostSNSUITests.m */,
-				4D5FCF031CAB84EC00AD1F96 /* Info.plist */,
-			);
-			path = PostSNSUITests;
+			name = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,6 +260,7 @@
 				4D5FCEE41CAB84EC00AD1F96 /* ViewController.m in Sources */,
 				4D5FCEE11CAB84EC00AD1F96 /* AppDelegate.m in Sources */,
 				4D5FCEDE1CAB84EC00AD1F96 /* main.m in Sources */,
+				4D5FCF121CAB854300AD1F96 /* PostSNSViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,7 +268,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D5FCEF71CAB84EC00AD1F96 /* PostSNSTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,7 +275,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D5FCF021CAB84EC00AD1F96 /* PostSNSUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +402,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PostSNS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hmhm.PostSNS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -427,6 +414,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PostSNS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hmhm.PostSNS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
